@@ -1,6 +1,6 @@
 import React from "react";
 
-const ChatBody = ({ messages, socket }) => {
+const ChatBody = ({ messages, lastMessageRef }) => {
   return (
     <>
       <div className="flex-1 p:2 sm:p-6 justify-between flex flex-col h-screen">
@@ -14,12 +14,12 @@ const ChatBody = ({ messages, socket }) => {
                 <div className="flex items-end justify-end">
                   <div className="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
                     <div>
-                      <span className="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white ">
+                      <span className="px-4 py-2 rounded-lg inline-block rounded-br-none bg-green-300 text-black ">
                         {message.text}
                       </span>
                     </div>
                   </div>
-                  <span>me</span>
+                  <span></span>
                 </div>
               </div>
             ) : (
@@ -37,6 +37,7 @@ const ChatBody = ({ messages, socket }) => {
               </div>
             )
           )}
+          <div ref={lastMessageRef} />
         </div>
       </div>
 
