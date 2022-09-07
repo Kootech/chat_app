@@ -1,10 +1,13 @@
+import ChatBody from "../components/ChatBody";
 
-const ChatPage = ()=> {
-  return(
+const ChatPage = () => {
+  return (
     <>
-    <div>Chat page</div>
+      <div>
+        <ChatBody />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ChatPage
+export default ChatPage;
