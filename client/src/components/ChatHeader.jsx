@@ -12,16 +12,19 @@ const ChatHeader = () => {
               </svg>
             </span>
             <img
-              src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
+              src="https://www.gravatar.com/avatar/EMAIL_MD5?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/Lasse+Rafn/128
+              "
               alt=""
               class="w-10 sm:w-16 h-10 sm:h-16 rounded-full"
             />
           </div>
           <div class="flex flex-col leading-tight">
             <div class="text-2xl mt-1 flex items-center">
-              <span class="text-gray-700 mr-3">Anderson Vanhron</span>
+              <span class="text-gray-700 mr-3">
+                {JSON.parse(localStorage.getItem("Chat-userName"))}
+              </span>
             </div>
-            <span class="text-lg text-gray-600">Junior Developer</span>
+            <span class="text-lg text-green-800">online</span>
           </div>
         </div>
         <div class="flex items-center space-x-2">
